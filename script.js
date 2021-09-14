@@ -2,12 +2,16 @@ function createLetter() {
   const letterText = document.getElementById('carta-texto');
   const generatedLetter = document.getElementById('carta-gerada');
   generatedLetter.innerHTML = '';
-  const words = letterText.value.split(' ').filter((word) => word !== '');
-  words.forEach((word) => {
-    const newSpan = document.createElement('span');
-    newSpan.innerText = word;
-    generatedLetter.append(newSpan);
-  });
+  if (letterText.value.trim() === '') {
+    generatedLetter.innerText = 'Por favor, digite o conteúdo da carta.';
+  } else {
+    const words = letterText.value.split(' ').filter((word) => word !== '');
+    words.forEach((word) => {
+      const newSpan = document.createElement('span');
+      newSpan.innerText = word;
+      generatedLetter.append(newSpan);
+    });
+  }
 }
 
 function addCreateLetterButtonEvents() {
