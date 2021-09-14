@@ -25,11 +25,30 @@ function verifyWhiteSpaces(arrayText) {
 	}
 }
 
+// Gera classes aleatoria
+function generateRandomClass() {
+	const styleGroup = ['', 'magazine1 ', 'magazine2 '];
+	const sizeGroup = ['', 'medium ', 'big ', 'reallybig '];
+	const rotationGroup = ['', 'rotateleft ', 'rotateright '];
+	const inclinationGroup = ['', 'skewleft ', 'skewright '];
+	let sum = 0;
+	while (sum < 2) {
+		indexStyle = Math.floor(Math.random() * styleGroup.length);
+		indexSize = Math.floor(Math.random() * sizeGroup.length);
+		indexRotation = Math.floor(Math.random() * rotationGroup.length);
+		indexInclination = Math.floor(Math.random() * inclinationGroup.length);
+		sum = (indexStyle !== 0) + (indexSize !== 0) + (indexRotation !== 0) + (indexInclination !== 0);
+	}
+	let classList = 'letter ';
+	classList += styleGroup[indexStyle] + sizeGroup[indexSize] + rotationGroup[indexRotation] + inclinationGroup[indexInclination];
+	return classList;
+}
+
 // Coloca todas as palavras no paragrafo, retirando whiteSpaces
 function setSpans(pBlock, arrayText) {
 	for (index = 0; index < arrayText.length; index += 1) {
 		if (arrayText[index] !== ''){
-			pBlock.append(newChild('span', arrayText[index], '', ''));
+			pBlock.append(newChild('span', arrayText[index], generateRandomClass(), ''));
 		}
 	}
 }
@@ -41,6 +60,12 @@ function deleteSpan(pBlock) {
   }
 }
 
+// Conta a quantidade de spans existentes
+function spanCount() {
+	const spans = document.querySelectorAll('.letter');
+	document.querySelector('#carta-contador').innerHTML = spans.length;
+}
+
 document.querySelector('#criar-carta').addEventListener('click', () => {
   const pBlock = document.querySelector('#carta-gerada');
 	const inputText = document.querySelector('#carta-texto');
@@ -50,6 +75,15 @@ document.querySelector('#criar-carta').addEventListener('click', () => {
 		pBlock.append(newChild('span', 'por favor, digite o conteúdo da carta.', '', ''));
 	} else {
 		deleteSpan(pBlock);
-		setSpans (pBlock, arrayText);
+		setSpans(pBlock, arrayText);
+	}
+	spanCount();
+});
+
+document.addEventListener('click', (event) => {
+	if (event.target.classList.contains('letter')) {
+		console.log(event.target.classList);
+		event.target.classList = generateRandomClass();
+		console.log(event.target.classList);
 	}
 });
