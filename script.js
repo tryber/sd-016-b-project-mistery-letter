@@ -8,21 +8,28 @@ function getRandomClass(group) {
   return group[index];
 }
 
+function addClassesTo(element) {
+  element.classList.add(getRandomClass(styleGroup));
+  element.classList.add(getRandomClass(sizeGroup));
+  element.classList.add(getRandomClass(rotateGroup));
+  element.classList.add(getRandomClass(skewGroup));
+}
+
 function createLetter() {
   const letterText = document.getElementById('carta-texto');
   const generatedLetter = document.getElementById('carta-gerada');
+  const letterCounter = document.getElementById('carta-contador');
   generatedLetter.innerHTML = '';
   if (letterText.value.trim() === '') {
     generatedLetter.innerText = 'Por favor, digite o conteúdo da carta.';
+    letterCounter.innerHTML = '';
   } else {
     const words = letterText.value.split(' ').filter((word) => word !== '');
+    letterCounter.innerText = words.length;
     words.forEach((word) => {
       const newSpan = document.createElement('span');
       newSpan.innerText = word;
-      newSpan.classList.add(getRandomClass(styleGroup));
-      newSpan.classList.add(getRandomClass(sizeGroup));
-      newSpan.classList.add(getRandomClass(rotateGroup));
-      newSpan.classList.add(getRandomClass(skewGroup));
+      addClassesTo(newSpan);
       generatedLetter.append(newSpan);
     });
   }
