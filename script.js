@@ -1,3 +1,13 @@
+const styleGroup = ['newspaper', 'magazine1', 'magazine2'];
+const sizeGroup = ['medium', 'big', 'reallybig'];
+const rotateGroup = ['rotateleft', 'rotateright'];
+const skewGroup = ['skewleft', 'skewright'];
+
+function getRandomClass(group) {
+  const index = Math.ceil(Math.random() * group.length) - 1;
+  return group[index];
+}
+
 function createLetter() {
   const letterText = document.getElementById('carta-texto');
   const generatedLetter = document.getElementById('carta-gerada');
@@ -9,6 +19,10 @@ function createLetter() {
     words.forEach((word) => {
       const newSpan = document.createElement('span');
       newSpan.innerText = word;
+      newSpan.classList.add(getRandomClass(styleGroup));
+      newSpan.classList.add(getRandomClass(sizeGroup));
+      newSpan.classList.add(getRandomClass(rotateGroup));
+      newSpan.classList.add(getRandomClass(skewGroup));
       generatedLetter.append(newSpan);
     });
   }
