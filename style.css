@@ -1,19 +1,23 @@
+span {
+  display: inline-block;
+}
+
 .newspaper {
-  background-color: rgb(250, 235, 215);
-  font-family: 'Times New Roman';
+  background-color: antiquewhite;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
 }
 
 .magazine1 {
   background-color: teal;
   color: white;
-  font-family: Verdana;
-  font-weight: 900;;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
 }
 
 .magazine2 {
-  background-image: url("images/pink-pattern.png");
+  background-image: url('images/pink-pattern.png');
   color: fuchsia;
   font-family: Verdana;
   font-weight: 900;
