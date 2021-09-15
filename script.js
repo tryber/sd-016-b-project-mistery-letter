@@ -27,24 +27,24 @@ function verifyWhiteSpaces(arrayText) {
 
 // Gera classes aleatoria
 function generateRandomClass() {
-  const styleGroup = ['', 'magazine1 ', 'magazine2 '];
-  const sizeGroup = ['', 'medium ', 'big ', 'reallybig '];
-  const rotationGroup = ['', 'rotateleft ', 'rotateright '];
-  const inclinationGroup = ['', 'skewleft ', 'skewright '];
-  let indexStyle; let indexSize; let indexRotation; let
-    indexInclination;
-  let sum = 0;
-  while (sum < 2) {
-    indexStyle = Math.floor(Math.random() * styleGroup.length);
-    indexSize = Math.floor(Math.random() * sizeGroup.length);
-    indexRotation = Math.floor(Math.random() * rotationGroup.length);
-    indexInclination = Math.floor(Math.random() * inclinationGroup.length);
-    sum = (indexStyle !== 0) + (indexSize !== 0) + (indexRotation !== 0) + (indexInclination !== 0);
+  const objectGroup = {
+    style: {0: '', 1: 'newspaper', 2: 'magazine1', 3: 'magazine2',},
+    size: {0: '', 1: 'medium', 2: 'big', 3: 'reallybig',},
+    rotation: {0: '', 1: 'rotateleft', 2: 'rotateright',},
+    inclination: {0: '', 1: 'skewleft', 2: 'skewright',},};
+  const arrayObject = Object.values(objectGroup);
+  let classList = '';
+  let randomNumber;
+  for (let index = 0; index < arrayObject.length; index += 1) {
+    const arrayObjectInterno = Object.values(arrayObject[index]);
+    randomNumber = Math.floor(Math.random() * arrayObjectInterno.length);
+    if (randomNumber > 0) {
+      if (classList !== '') {
+        classList += ' ';
+      }
+      classList += arrayObjectInterno[randomNumber];
+    }
   }
-  let classList = 'letter ';
-  classList += styleGroup[indexStyle] + sizeGroup[indexSize];
-  classList += rotationGroup[indexRotation] + inclinationGroup[indexInclination];
-  console.log(classList);
   return classList;
 }
 
@@ -66,10 +66,11 @@ function deleteSpan(pBlock) {
 
 // Conta a quantidade de spans existentes
 function spanCount() {
-  const spans = document.querySelectorAll('.letter');
+  const spans = document.querySelectorAll('span');
   document.querySelector('#carta-contador').innerHTML = spans.length;
 }
 
+// Evento que acontece quando aperto o botao gerar carta
 document.querySelector('#criar-carta').addEventListener('click', () => {
   const pBlock = document.querySelector('#carta-gerada');
   const inputText = document.querySelector('#carta-texto');
@@ -82,11 +83,11 @@ document.querySelector('#criar-carta').addEventListener('click', () => {
     setSpans(pBlock, arrayText);
   }
   spanCount();
-});
-
-document.addEventListener('click', (event) => {
-  if (event.target.classList.contains('letter')) {
-    const evt = event.target;
-    evt.classList = generateRandomClass();
+  const spanStyle = document.querySelectorAll('span');
+  for (let index = 0; index < spanStyle.length; index += 1) {
+    spanStyle[index].addEventListener('click', (event) => {
+      const evt = event.target;
+      evt.classList = generateRandomClass();
+    });
   }
 });
