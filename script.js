@@ -35,17 +35,25 @@ function insertingClasses() {
   }
 }
 
+function countWords() {
+  const getCounter = document.getElementById('carta-contador');
+  getCounter.innerText = getParagraph.children.length;
+}
+
 // ref: https://www.samanthaming.com/tidbits/83-4-ways-to-convert-string-to-character-array/
 function createLetter() {
   const replaceSpace = getInput.value.split(' ');
   const arrayInput = Array.from(replaceSpace);
-  for (let i = 0; i < arrayInput.length; i += 1) {
-    const createSpan = document.createElement('span');
-    createSpan.innerText = `${arrayInput[i]}`;
-    getParagraph.appendChild(createSpan);
+  for (let i = getParagraph.children.length; i < arrayInput.length; i += 1) {
+    if (arrayInput[i] !== '') {
+      const createSpan = document.createElement('span');
+      createSpan.innerText = `${arrayInput[i]}`;
+      getParagraph.appendChild(createSpan);
+    }
   }
   emptyInput();
   insertingClasses();
+  countWords();
 }
 
 getButton.addEventListener('click', createLetter);
