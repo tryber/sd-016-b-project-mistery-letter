@@ -42,6 +42,7 @@ function countWords() {
 
 // ref: https://www.samanthaming.com/tidbits/83-4-ways-to-convert-string-to-character-array/
 function createLetter() {
+  getParagraph.innerHTML = '';
   const replaceSpace = getInput.value.split(' ');
   const arrayInput = Array.from(replaceSpace);
   for (let i = getParagraph.children.length; i < arrayInput.length; i += 1) {
