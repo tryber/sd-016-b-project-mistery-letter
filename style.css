@@ -1,3 +1,7 @@
+body {
+  background-color: lightblue;
+}
+
 span {
   display: inline-block;
 }
@@ -52,4 +56,8 @@ span {
 
 .skewright {
   transform: skewX(-10deg);
+}
+
+input {
+  width: 400px;
 }
