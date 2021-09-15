@@ -8,6 +8,33 @@ function emptyInput() {
   }
 }
 
+function firstGroup() {
+  const styleGroup = ['newspaper', 'magazine1', 'magazine2'];
+  return styleGroup[Math.floor(Math.random() * 3)];
+}
+
+function secondGroup() {
+  const sizeGroup = ['medium', 'big', 'reallybig'];
+  return sizeGroup[Math.floor(Math.random() * 3)];
+}
+
+function thirdGroup() {
+  const rotationGroup = ['rotateleft', 'rotateright'];
+  return rotationGroup[Math.floor(Math.random() * 2)];
+}
+
+function fourthGroup() {
+  const inclinationGroup = ['skewleft', 'skewright'];
+  return inclinationGroup[Math.floor(Math.random() * 2)];
+}
+
+function insertingClasses() {
+  const spanClass = getParagraph.children;
+  for (let i = 0; i < getParagraph.children.length; i += 1) {
+    spanClass[i].className = `${firstGroup()} ${secondGroup()} ${thirdGroup()} ${fourthGroup()}`;
+  }
+}
+
 // ref: https://www.samanthaming.com/tidbits/83-4-ways-to-convert-string-to-character-array/
 function createLetter() {
   const replaceSpace = getInput.value.split(' ');
@@ -18,6 +45,7 @@ function createLetter() {
     getParagraph.appendChild(createSpan);
   }
   emptyInput();
+  insertingClasses();
 }
 
 getButton.addEventListener('click', createLetter);
