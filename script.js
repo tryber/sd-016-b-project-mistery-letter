@@ -10,9 +10,11 @@ function deleteExistentSpans() {
 }
 
 function createLetter() {
-  console.log(text.childNodes)
-  if (text.children.length > 0) {
-   deleteExistentSpans()
+  if (inputText.value === '' || inputText.value === ' ') {
+    text.innerText = 'Por favor, digite o conteúdo da carta.'
+  }
+  else if (text.children.length > 0) {
+    deleteExistentSpans()
   }
   const inputValue = inputText.value.split(' ')
   for (let i = 0; i < inputValue.length; i += 1) {
@@ -20,7 +22,6 @@ function createLetter() {
     text.appendChild(spanTag)
     spanTag.innerText = inputValue[i]
   }
-  inputText.value = ""
 }
 
 createLetterBtn.addEventListener('click', createLetter)
