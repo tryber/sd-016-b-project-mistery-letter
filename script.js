@@ -5,7 +5,7 @@ button.addEventListener('click', () => {
   const p = document.querySelector('#carta-gerada');
   const span = document.createElement('span');
   if (input.value === '' || input.value === ' ') {
-    span.innerHTML = "Por favor, digite o conteúdo da carta.";
+    span.innerText = "Por favor, digite o conteúdo da carta.";
     p.appendChild(span);
   } else {
     span.innerHTML = input.value;
