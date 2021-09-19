@@ -46,6 +46,10 @@
   transform: skewX(10deg);
 }
 
+.skewright {
+  transform: skewX(-10deg);
+}
+
 /* .teste {
     border: 1px solid red;
     width: 100px;
