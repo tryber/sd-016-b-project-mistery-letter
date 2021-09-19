@@ -87,6 +87,10 @@ body {
   margin-left: 2.2rem;
 }
 
+#carta-gerada {
+  margin-top: 5rem;
+}
+
 .newspaper {
   background-color: antiquewhite;
   font-family: 'Times New Roman';
