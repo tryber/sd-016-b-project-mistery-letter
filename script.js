@@ -39,6 +39,11 @@ function randNum(eTar) {
   }
 }
 
+function contador(pal) {
+  const pCont = document.querySelector('#carta-contador');
+  pCont.innerText = pal.length;
+}
+
 function letGen() {
   const pFather = document.querySelector('#carta-gerada');
   const inpTxt = document.querySelector('#carta-texto').value;
@@ -53,6 +58,7 @@ function letGen() {
       newSpan.innerText = `${splVal[i]}`;
       randNum(newSpan);
       pFather.appendChild(newSpan);
+      contador(splVal);
     }
   }
 }
