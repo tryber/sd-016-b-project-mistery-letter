@@ -6,7 +6,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: 'Ubuntu';
+  font-family: 'Ubuntu', sans-serif;
 }
 
 body {
@@ -31,7 +31,7 @@ body {
   color: #e4ebe9;
   font-size: 5.8rem;
   letter-spacing: 5px;
-  font-family: 'Bangers', cursive;
+  font-family: Bangers, cursive;
 }
 
 .header-img {
@@ -45,7 +45,7 @@ body {
 
 .container {
   width: 104rem;
-  margin: 2.2rem auto 0 auto;
+  margin: 2.2rem auto 0;
 }
 
 .header_h3 {
@@ -65,7 +65,7 @@ body {
 
 .mid-container {
   width: 52rem;
-  margin: 5.8rem auto 0 auto;
+  margin: 5.8rem auto 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -93,22 +93,22 @@ body {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman';
-  font-weight: bold;
+  font-family: Times New Roman, sans-serif;
+  font-weight: 700;
 }
 
 .magazine1 {
   background-color: teal;
   color: white;
-  font-family: 'Verdana';
+  font-family: Verdana, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .magazine2 {
-  background-image: url(./images/pink-pattern.png);
+  background-image: url('./images/pink-pattern.png');
   color: fuchsia;
-  font-family: 'Verdana';
+  font-family: Verdana, sans-serif;
   font-weight: 900;
 }
 

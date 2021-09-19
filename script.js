@@ -7,28 +7,24 @@ const objStyles = {
 
 const arrSty = [1, 2, 3, 4];
 
-//retirado do site horadecodar.com.br
+// retirado do site horadecodar.com.br
 // Função para randomizar array
 function shuffleArray(arr) {
-  // Loop em todos os elementos
-  for (let i = arr.length - 1; i > 0; i -= 1) {
-    // Escolhendo elemento aleatório
+  const teste = arr;
+  for (let i = teste.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));
-    // Reposicionando elemento
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+    [teste[i], teste[j]] = [teste[j], teste[i]];
   }
-  // Retornando array com aleatoriedade
-  return arr;
+  return teste;
 }
 
 function testInp(test) {
-  for (let i = 0; i < test.length; i += 1) {
-    if (test[i] !== '') {
-      return false;
-    }
-    return true;
+  if (test[0] !== '') {
+    return false;
   }
+  return true;
 }
+
 function randNum(eTar) {
   const numberOfStyles = Math.floor(Math.random() * (3 + 1));
   const arrayEmb = shuffleArray(arrSty);
