@@ -1,10 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: rgb(232 , 244 , 241);
+  background-color: rgb(232, 244, 241);
   font-family: sans-serif;
 }
 
@@ -14,10 +14,9 @@ h1 , h2 {
 
 #header-container {
   align-items: center;
-  background-color: rgb(3 , 107 , 82);
-  border-bottom: 7px solid rgb(47 , 193 , 140);
+  background-color: rgb(3, 107, 82);
+  border-bottom: 7px solid rgb(47, 193, 140);
   display: flex;
-  /* margin: -8px -12px 5px; */
 }
 
 #title-container {
@@ -30,24 +29,22 @@ h1 , h2 {
 }
 
 #title {
-  color: rgb(253 , 255 , 255);
+  color: rgb(253, 255, 255);
   letter-spacing: 2.5px;
   margin: 17.44px 72px;
 }
 
 #nav {
-  color: rgb(253 , 255 , 255);
+  color: rgb(253, 255, 255);
   font-size: 18px;
   margin-left: 72px;
 }
 
 .link {
-  color: rgb(257 , 255 , 255);
+  color: rgb(257, 255, 255);
   letter-spacing: 0.7px;
   text-decoration: none;
 }
-
-/* // divisao */
 
 #footer {
   margin-top: 30%;
@@ -55,21 +52,21 @@ h1 , h2 {
 }
 
 #phrase {
-  background-color: rgb(68 , 73 , 85);
+  background-color: rgb(68, 73, 85);
   margin-top: 5%;
   padding: 2.2% 0;
 }
 
 #phrase a {
-  color: rgb(253 , 251 , 251);
+  color: rgb(253, 251, 251);
   font-size: 12px;
   overflow: hidden;
   text-decoration: none;
 }
 
 #signature {
-  background-color: rgb(60 , 64 , 74);
-  color: rgb(157 , 162 , 173);
+  background-color: rgb(60, 64, 74);
+  color: rgb(157, 162, 173);
   font-size: 12px;
   padding: 3.3% 0;
 }
