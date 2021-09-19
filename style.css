@@ -1,11 +1,11 @@
 span {
-    display: inline-block;
+  display: inline-block;
 }
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
+  font-family: Times New Roman, Times, serif;
+  font-weight: 700;
 }
 
 .magazine1 {
@@ -17,7 +17,7 @@ span {
 }
 
 .magazine2 {
-  background-image: url(images/pink-pattern.png);
+  background-image: 'url(images/pink-pattern.png)';
   color: fuchsia;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
@@ -53,9 +53,3 @@ span {
 .skewright {
   transform: skewX(-10deg);
 }
-
-/* .teste {
-    border: 1px solid red;
-    width: 100px;
-    height: 50px;
-} */
