@@ -11,8 +11,6 @@ function generateLetter() {
     document.getElementById('carta-gerada').appendChild(newWord);
   }
 
-  document.getElementById('carta-texto').value = '';
-
 }
 
 generateBtn.addEventListener('click', generateLetter);
