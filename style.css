@@ -74,4 +74,15 @@ body {
 /* projeto */
 #carta-texto {
   font-size: 2.2rem;
+  width: 64.5rem;
+  margin-top: 2.2rem;
+}
+
+#criar-carta {
+  font-size: 2.5rem;
+  background-color: #3e8c6f;
+  border: none;
+  width: 15.2rem;
+  border-radius: 1rem;
+  margin-left: 2.2rem;
 }
