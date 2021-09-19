@@ -8,6 +8,12 @@ const tamanho = ['medium', 'big', 'reallybig'];
 const rotacao = ['rotateleft', 'rotateright'];
 const inclinação = ['skewleft', 'skewright'];
 
+function count() {
+  const text = input.value;
+  const split = text.split(' ').length;
+  contador.innerHTML = split;
+}
+
 function GenerateCard() {
   button.addEventListener('click', () => {
     const p = document.querySelector('#carta-gerada');
@@ -21,26 +27,20 @@ function GenerateCard() {
       span.innerHTML = input.value;
       span.className = estilo[Math.floor(Math.random() * estilo.length)] + ' ' + tamanho[Math.floor(Math.random() * tamanho.length)] + ' ' + rotacao[Math.floor(Math.random() * rotacao.length)] + ' ' + inclinação[Math.floor(Math.random() * inclinação.length)];
       p.appendChild(span);
+      count();
     }
   });
 }
 function changeClassOnClick() {
   const p = document.querySelector('#carta-gerada');
   p.addEventListener('click', (e) => {
-    e.target.className = estilo[Math.floor(Math.random() * estilo.length)] + ' ' + tamanho[Math.floor(Math.random() * tamanho.length)] + ' ' + rotacao[Math.floor(Math.random() * rotacao.length)] + ' ' + inclinação[Math.floor(Math.random() * inclinação.length)];
-  });
-}
-
-function count() {
-  button.addEventListener('click', () => {
-    const text = input.value;
-    const split = text.split(' ').length;
-    contador.innerHTML = split;
+    if (e.target.hasAttribute('class')) {
+      e.target.className = estilo[Math.floor(Math.random() * estilo.length)] + ' ' + tamanho[Math.floor(Math.random() * tamanho.length)] + ' ' + rotacao[Math.floor(Math.random() * rotacao.length)] + ' ' + inclinação[Math.floor(Math.random() * inclinação.length)];
+    }
   });
 }
 
 window.onload = () => {
   changeClassOnClick();
   GenerateCard();
-  count();
-}
+};
