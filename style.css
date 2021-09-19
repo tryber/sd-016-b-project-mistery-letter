@@ -29,6 +29,10 @@
   padding: 10px;
 }
 
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
 .reallybig {
   font-size: 40px;
   padding: 15px;
