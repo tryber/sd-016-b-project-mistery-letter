@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap') ;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Raleway, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+main {
+  margin: 15px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.input-container label {
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+
+#carta-texto {
+  width: 80%;
+  padding: 10px;
+  border-radius: 3%;
+  box-shadow: 1px 1px rgb(134, 133, 133);
+}
+
+#carta-texto:hover {
+  border: 2px solid rgb(163, 167, 163);
+}
+
+.button-container {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+#criar-carta {
+  padding: 10px;
+  width: 20%;
+  background-color: rgb(238, 70, 64);
+  font-size: 20px;
+  border: 2px solid  rgb(221, 40, 34);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+#criar-carta:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.word-counter {
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.word-counter span {
+  margin: 0 6px;
+  font-size: 30px;
+}
+
+#carta-contador {
+  font-size: 30px;
+}
+
+#carta-gerada {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: Times New Roman, sans-serif;
+  font-weight: 700;
+}
+
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.magazine2 {
+  background-image: url('images/pink-pattern.png');
+  color: fuchsia;
+  font-family: Verdana, sans-serif;
+  font-weight: 900;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
+}
+
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+.rotateright {
+  transform: rotate(5deg);
+}
+
+.skewleft {
+  transform: skewX(10deg);
+}
+
+.skewright {
+  transform: skewX(-10deg);
+}
