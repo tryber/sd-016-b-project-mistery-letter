@@ -46,6 +46,12 @@ h1 , h2 {
   text-decoration: none;
 }
 
+.newspaper {
+  background-color: antiquewhite;
+  font-family: 'Times New Roman';
+  font-weight: bold;
+}
+
 #footer {
   margin-top: 30%;
   text-align: center;
