@@ -46,6 +46,10 @@ h1 , h2 {
   text-decoration: none;
 }
 
+main {
+  text-align: center;
+}
+
 #carta-texto-container {
   margin-top: 4%;
 }
