@@ -33,3 +33,8 @@ criarCartaButton.addEventListener('click', () => {
     cartaGeradaP.innerText = 'Por favor, digite o conteúdo da carta.';
   }
 });
+
+cartaGeradaP.addEventListener('click', (event) => {
+  const click = event.target;
+  click.className = classes();
+});
