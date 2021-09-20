@@ -95,7 +95,9 @@ h1 , h2 {
   transform: skewX(10deg);
 }
 
-
+.skewright {
+  transform: skewX(-10deg);
+}
 
 #footer {
   margin-top: 30%;
