@@ -1,6 +1,7 @@
 const criarCartaButton = document.querySelector('#criar-carta');
 const cartaTexto = document.querySelector('#carta-texto');
 const cartaGeradaP = document.querySelector('#carta-gerada');
+const cartaContador = document.querySelector('#carta-contador');
 
 function classes() {
   const style = ['newspaper', 'magazine1', 'magazine2'];
@@ -20,8 +21,9 @@ function classes() {
 
 criarCartaButton.addEventListener('click', () => {
   cartaGeradaP.innerHTML = '';
+  cartaGeradaP.classList = '';
   const cartaTextoInput = cartaTexto.value;
-  if (cartaTextoInput !== '') {
+  if (cartaTextoInput !== '' && cartaTextoInput !== ' ') {
     const array = cartaTextoInput.split(' ');
     for (let i = 0; i < array.length; i += 1) {
       const span = document.createElement('span');
@@ -29,6 +31,8 @@ criarCartaButton.addEventListener('click', () => {
       span.className = classes();
       cartaGeradaP.appendChild(span);
     }
+    cartaContador.innerText = array.length;
+    console.log(array);
   } else {
     cartaGeradaP.innerText = 'Por favor, digite o conteúdo da carta.';
   }

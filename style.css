@@ -46,6 +46,18 @@ h1 , h2 {
   text-decoration: none;
 }
 
+#carta-texto-container {
+  margin-top: 4%;
+}
+
+#carta-gerada-container {
+  margin-top: 5%;
+}
+
+#count {
+  margin-top: 5%;
+}
+
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman, Times, serif;
