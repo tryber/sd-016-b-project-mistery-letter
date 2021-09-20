@@ -83,6 +83,12 @@ h1 , h2 {
   padding: 15px;
 }
 
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+
+
 #footer {
   margin-top: 30%;
   text-align: center;
