@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,19 +10,25 @@
 <body>
   <header>
     <div class="title-container">
-     <h1 id="title">Mistery Letter</h1>
+     <h1 id="title">Mistery Letter Generator</h1>
     </div>
   </header>
   <main>
     <section class="input-container">
-      <input type="text" id=carta-texto>
+      <label for="carta-texto">Insira o conteudo da carta: </label>
+      <input type="text" id="carta-texto">
+      
+    </section>
+    <section class="button-container">
+      <button id="criar-carta">Gerar Carta</button>
+    </section>
+    <section class="word-counter">
+      <span>A carta tem: </span>
+      <p id="carta-contador">0</p>
+      <span>palavras.</span>
     </section>
     <section class="text-container">
       <p id="carta-gerada"></p>
-      <p id="carta-contador"></p>
-    </section>
-    <section class="button-container">
-      <button id="criar-carta">Criar Carta</button>
     </section>
   </main>
 
