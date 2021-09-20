@@ -52,6 +52,14 @@ h1 , h2 {
   font-weight: bold;
 }
 
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: 'Verdana';
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 #footer {
   margin-top: 30%;
   text-align: center;
