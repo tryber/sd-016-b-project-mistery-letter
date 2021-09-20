@@ -87,6 +87,10 @@ h1 , h2 {
   transform: rotate(-5deg);
 }
 
+.rotateright {
+  transform: rotate(5deg);
+}
+
 
 
 #footer {
