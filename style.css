@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(196, 189, 189);
+  margin: 0;
+  
+}
+
+#intro-container {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+
+}
+
+#container-input {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
