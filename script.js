@@ -1,10 +1,10 @@
 const buttonCreateText = document.getElementById('criar-carta');
 const textArea = document.getElementById('carta-gerada');
-
 const classStyle = ['newspaper', 'magazine1', 'magazine2'];
 const classSize = ['medium', 'big', 'reallybig'];
 const classRotation = ['rotateright', 'rotateleft'];
 const classInclination = ['skewleft', 'skewright'];
+
 function randomClasseStyle() {
   const classeS = `${classStyle[parseInt(Math.random() * classStyle.length)]} `;
   return classeS;
@@ -57,4 +57,14 @@ buttonCreateText.addEventListener('click', () => {
       textArea.appendChild(spanText);
     }
   }
+});
+
+buttonCreateText.addEventListener('click', () => {
+  const inputText = document.getElementById('carta-texto').value;
+  const containerContador = document.getElementById('contador');
+  const textoQuebrado = inputText.split(' ');
+  const contador = document.getElementById('carta-contador')
+  contador.innerText = '';
+  contador.innerText = textoQuebrado.length;
+  containerContador.appendChild(contador);
 });

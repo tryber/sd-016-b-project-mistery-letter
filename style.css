@@ -4,15 +4,13 @@ body {
 }
 
 #intro-container {
-  border: 1px solid black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 200px;
-
+  align-items: center;
 }
 
 #container-input {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
 }
@@ -20,7 +18,6 @@ body {
 #carta-container {
   display: flex;
   height: 200px;
-  border: 1px solid black;
   align-items: stretch;
 }
 
@@ -78,4 +75,13 @@ body {
 
 span {
   display: inline-block;
+}
+
+#contador {
+  display: flex;
+  width: 200px;
+  height: 30px;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
 }
