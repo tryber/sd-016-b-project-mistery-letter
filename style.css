@@ -1,10 +1,14 @@
-h1{
+h1 {
   text-align: center;
   color: gray;
 }
 
 body {
   background-image: url('QV0fiMX-kids-computer-wallpaper.jpg');
+}
+
+span p {
+  margin-right: 5px;
 }
 
 #main-section {
@@ -39,7 +43,7 @@ body {
 }
 
 .magazine2 {
-  background-image: url(images/pink-pattern.png);
+  background-image: url('images/pink-pattern.png');
   color: fuchsia;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
@@ -52,8 +56,8 @@ body {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
+  font-family: Times New Roman, Times, serif;
+  font-weight: 700;
 }
 
 .reallybig {
@@ -76,5 +80,3 @@ body {
 .skewright {
   transform: skewX(-10deg);
 }
-
-
