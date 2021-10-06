@@ -2,7 +2,10 @@ const getButton = document.querySelector('#criar-carta');
 const getInput = document.querySelector('#carta-texto');
 const getP = document.querySelector('#carta-gerada');
 const getCount = document.querySelector('#carta-contador');
-const classes = ['newspaper', 'magazine1', 'magazine2','medium', 'big', 'reallybig', 'rotateleft', 'rotateright', 'skewleft', 'skewright'];
+const classes = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'rotateleft'];
+classes.push('rotateright');
+classes.push('skewleft');
+classes.push('skewright');
 let count = 0;
 
 const randonClass = () => {
@@ -20,7 +23,7 @@ getButton.addEventListener('click', () => {
     getP.innerHTML = '';
     for (let i = 0; i < valorInputSplit.length; i += 1) {
       count += 1;
-      let criaSpan = document.createElement('span');
+      const criaSpan = document.createElement('span');
       criaSpan.innerText = valorInputSplit[i];
       criaSpan.className = randonClass();
       getP.appendChild(criaSpan);
