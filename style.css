@@ -2,3 +2,13 @@
   margin: 0;
   padding: 0;
 }
+
+#criar-carta , #carta-texto {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#criar-carta {
+  border-radius: 4px;
+  padding: 5px;
+}
