@@ -28,6 +28,11 @@
   font-weight: 900;
 }
 
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman, Times, serif;
