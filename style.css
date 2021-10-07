@@ -12,3 +12,9 @@
   border-radius: 4px;
   padding: 5px;
 }
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: Times New Roman, Times, serif;
+  font-weight: 700;
+}
