@@ -3,14 +3,16 @@ const inputText = document.querySelector('#carta-texto');
 const paragraphText = document.querySelector('#carta-gerada');
 
 function letter() {
-  const splitWords = inputText.value.split(' ');
-  if (paragraphText.innerHTML === '') {
-    for (let index = 0; index < splitWords.length; index += 1) {
-      paragraphText.innerHTML += `<span>${splitWords[index]}</span> `;
-    }
+  paragraphText.innerHTML = '';
+  if (inputText.value === 0 || inputText.value.trim() === '') {
+    paragraphText.innerText = 'Por favor, digite o conteúdo da carta.';
   } else {
-    paragraphText.innerHTML = '';
-    letter();
+    const splitWords = inputText.value.split(' ').filter((word) => word !== '');
+    splitWords.forEach((word) => {
+      const createSpan = document.createElement('span');
+      createSpan.innerText = word;
+      paragraphText.append(createSpan);
+    });
   }
 }
 
