@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
 #criar-carta , #carta-texto {
   margin-top: 10px;
   margin-left: 10px;
