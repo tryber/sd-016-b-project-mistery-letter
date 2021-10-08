@@ -1,3 +1,4 @@
+let count = 0;
 const randomClass = () => {
   const arrStyle = ['newspaper', 'magazine1', 'magazine2'];
   const arrSize = ['medium', 'big', 'reallybig'];
@@ -18,11 +19,18 @@ const transformInMistery = () => {
   }
 };
 
+const createCounter = () => {
+  const pCounter = document.getElementById('carta-contador');
+  if (count !== 0) {
+    pCounter.innerText = count;
+  }
+};
+
 const createParagraphText = () => {
   const textInput = document.getElementById('carta-texto');
   const paragraph = document.getElementById('carta-gerada');
   const textValue = textInput.value.split(' ');
-
+  count = textValue.length;
   if (textInput.value.trim().length === 0) {
     paragraph.innerHTML = 'Por favor, digite o conteúdo da carta.';
   } else {
@@ -33,6 +41,7 @@ const createParagraphText = () => {
       paragraph.appendChild(createSpan);
     }
     transformInMistery();
+    createCounter();
   }
 };
 
