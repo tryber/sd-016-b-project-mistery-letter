@@ -1,6 +1,21 @@
+const modelo = ['newspaper', 'magazine1', 'magazine2'];
+const tamanho = ['medium', 'big', 'reallybig'];
+const rotacao = ['rotateleft', 'rotateright'];
+const inclinacao = ['skewleft', 'skewright'];
+
+const sorteia = (l) => l[Math.ceil(Math.random() * l.length) - 1];
+
+function aplicarEstilo(s) {
+  s.classList.add(sorteia(modelo));
+  s.classList.add(sorteia(tamanho));
+  s.classList.add(sorteia(rotacao));
+  s.classList.add(sorteia(inclinacao));
+}
+
 function gerarPalavra(texto) {
   const span = document.createElement('span');
   span.innerText = texto;
+  aplicarEstilo(span);
   return span;
 }
 
@@ -13,12 +28,10 @@ function gerarCarta() {
     cartaGerada.innerText = texto;
     return;
   }
-  texto = texto.split(' ');
-  document.querySelector('#carta-contador').innerText = texto.length;
-  cartaGerada.innerHTML = '';
-  texto.forEach((i) => {
-    cartaGerada.appendChild(gerarPalavra(i));
-  });
+  texto = texto.split(' ').filter((t) => t !== ''); //                    separa palavras e tira vazias
+  document.querySelector('#carta-contador').innerText = texto.length; //  atualiza contador
+  cartaGerada.innerHTML = ''; //                                          limpa conteúdo antigo
+  texto.forEach((i) => cartaGerada.appendChild(gerarPalavra(i))); //      adiciona as palavras
 }
 
 function configurar() {
