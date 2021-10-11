@@ -14,6 +14,7 @@ function gerarCarta() {
     return;
   }
   texto = texto.split(' ');
+  document.querySelector('#carta-contador').innerText = texto.length;
   cartaGerada.innerHTML = '';
   texto.forEach((i) => {
     cartaGerada.appendChild(gerarPalavra(i));
