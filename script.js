@@ -1,10 +1,23 @@
+function gerarPalavra(texto) {
+  const span = document.createElement('span');
+  span.innerText = texto;
+  return span;
+}
+
 function gerarCarta() {
-  let texto = document.querySelector('#carta-texto').value;
+  const cartaGerada = document.querySelector('#carta-gerada');
+  let texto = `${document.querySelector('#carta-texto').value}`;
   // https://stackoverflow.com/questions/10261986/how-to-detect-string-which-contains-only-spaces
   if (!texto.length || !texto.replace(/\s/g, '').length) {
     texto = 'Por favor, digite o conteúdo da carta.';
+    cartaGerada.innerText = texto;
+    return;
   }
-  document.querySelector('#carta-gerada').innerText = texto;
+  texto = texto.split(' ');
+  cartaGerada.innerHTML = '';
+  texto.forEach((i) => {
+    cartaGerada.appendChild(gerarPalavra(i));
+  });
 }
 
 function configurar() {
