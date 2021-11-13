@@ -1,11 +1,40 @@
-/* span {
-  display: inline-block;
-} */
+body {
+  background-color: gray;
+}
+
+main {
+  width: 1000px;
+  height: 600px;
+  background-color: white;
+  margin: auto;
+  margin-top: 7.5%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+section {
+  width: 900px;
+  height: auto;
+  margin: auto;
+}
+
+input {
+  width: 750px;
+}
+
+input , button {
+  display: inline;
+}
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
+  font-family: Times New Roman, Times, serif;
+  font-weight: 700;
 }
 
 .magazine1 {
@@ -17,7 +46,7 @@
 }
 
 .magazine2 {
-  background-image: url(images/pink-pattern.png);
+  background-image: url('images/pink-pattern.png');
   color: fuchsia;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
@@ -52,4 +81,14 @@
 
 .skewright {
   transform: skewX(-10deg);
+}
+
+#carta-contador {
+  text-align: center;
+  font-size: 30px;
+  font-family: Courier New, Courier, monospace;
+}
+
+span {
+  display: inline-block;
 }
