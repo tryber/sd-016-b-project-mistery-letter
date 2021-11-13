@@ -26,19 +26,19 @@ const random = (params) => {
   return arr;
 };
 
-const createClass = () => {
-  const arr = [
-    ['newspaper', 'magazine1', 'magazine2'],
-    ['medium', 'big', 'reallybig'],
-    ['rotateleft', 'rotateright'],
-    ['skewleft', 'skewright'],
-  ];
-  for (let i = 0; i < arr.length; i += 1) {
-    console.log(arr[i][random(arr[i].length)]);
-    if (i >= 0) {
-      return arr[random(arr.length)][random(arr[i].length)];
-    }
-  }
+const randomRotate = () => {
+  const arr = ['rotateleft', 'rotateright', 'skewleft', 'skewright'];
+  return arr[random(arr.length)];
+};
+
+const randomSize = () => {
+  const arr = ['medium', 'big', 'reallybig'];
+  return arr[random(arr.length)];
+};
+
+const randonStyle = () => {
+  const arr = ['newspaper', 'magazine1', 'magazine2'];
+  return arr[random(arr.length)];
 };
 
 btnLetter.addEventListener('click', () => {
@@ -52,7 +52,9 @@ btnLetter.addEventListener('click', () => {
       const makeMessage = document.createElement('span');
       pLetter.appendChild(makeMessage);
       makeMessage.textContent = arrString[i];
-      makeMessage.classList.add(createClass());
+      makeMessage.classList.add(randonStyle());
+      makeMessage.classList.add(randomSize());
+      makeMessage.classList.add(randomRotate());
     }
   }
 });
