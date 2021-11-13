@@ -4,7 +4,8 @@ body {
 
 main {
   width: 1000px;
-  height: 600px;
+  height: auto;
+  min-height: 250px;
   background-color: white;
   margin: auto;
   margin-top: 7.5%;
