@@ -12,12 +12,17 @@ const makeArrMessage = (params) => {
 };
 
 btnLetter.addEventListener('click', () => {
-  pLetter.innerHTML = '';
-  const iMessage = input.value;
-  const arrString = makeArrMessage(iMessage);
-  for (let i = 0; i < arrString.length; i += 1) {
-    const makeMessage = document.createElement('span');
-    pLetter.appendChild(makeMessage);
-    makeMessage.textContent = arrString[i];
+  console.log(input.value);
+  if (input.value === '' || input.value === ' ') {
+    pLetter.textContent = 'Por favor, digite o conteúdo da carta.';
+  } else {
+    pLetter.innerHTML = '';
+    const iMessage = input.value;
+    const arrString = makeArrMessage(iMessage);
+    for (let i = 0; i < arrString.length; i += 1) {
+      const makeMessage = document.createElement('span');
+      pLetter.appendChild(makeMessage);
+      makeMessage.textContent = arrString[i];
+    }
   }
 });
